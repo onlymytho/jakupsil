@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style media="screen">
+            .content {
+                margin: 110px;
+                width: calc(100% - 220px);
+                height: 100vh;
+            }
+            .init_block_item {
+                display: inline-block;
+            }
+            .init_block_item#img {
+                margin-top: 164px;
+            }
+            .init_block_item#info {
+                float: right;
+                width: 220px;
+            }
+            .init_block_item#info .title{
+                font-family: "GothamBlack";
+                font-weight: 500;
+                font-size: 24px;
+            }
+            .init_block_item#info .contact .title{
+                margin-top: 80px;
+                font-family: "Gotham";
+                font-weight: Bold;
+                font-size: 12px;
+            }
+            .init_block_item#info .contact .desc_contact{
+                margin-top: 10px;
+                font-family: "GothamLight";
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 16px;
+            }
+            .init_block_item#info .members {
+                margin-top: 60px;
+            }
+            .init_block_item#info .members .info {
+                display: inline-block;
+                width: 54px;
+                margin-right: 12px;
+            }
+            .init_block_item#info .members .info img {
+                width: 100%;
+                height: 54px;
+                border-radius: 50%;
+            }
+            .init_block_item#info .members .info .name {
+                margin-top: 8px;
+                text-align: center;
+                font-family: "GothamMedium";
+                font-style: italic;
+                font-weight: 500;
+                font-size: 12px;
+            }
+            .init_block_item#info .members .info .phone {
+                margin-top: 8px;
+                font-family: "GothamLight";
+                font-weight: 500;
+                font-size: 11px;
+                text-align: center;
+            }
+            .img_block {
+                margin-top: 25vh;
+            }
+            .img_block .item_wrapper {
+                width: 640px;
+            }
+            .item_img {
+                background: url("https://scontent-hkg3-1.cdninstagram.com/t51.2885-15/e35/22157185_1876354229284743_4635429160280391680_n.jpg");
+                background-position: center;
+                width: 620px;
+                height: 348px;
+            }
+            .item_img#1 {
+                background: url()
+            }
+            .item_img#2 {
+                background: url()
+            }
+            .item_img#3 {
+                background: url()
+            }
+            .item_img_desc {
+                font-family: Courier;
+                margin-top: 8px;
+                font-size: 13px;
+            }
+            .footer {
+                width: 100%;
+                height: 480px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="content">
+            <div class="init_block">
+                <div id="img" class="init_block_item">
+                    <div id="init" class="item_img" src="https://scontent-hkg3-1.cdninstagram.com/t51.2885-15/e35/22157185_1876354229284743_4635429160280391680_n.jpg"> </div>
+
+                    <div class="item_img_desc">
+                        2017.10.09 We want to make our website.
+                    </div>
+                </div>
+                <div id="info" class="init_block_item">
+                    <div class="title">
+                        JAKUPSIL<br>IN<br>YEONNAM.
+                    </div>
+                    <div class="contact">
+                        <div class="title">
+                            CONTACT.
+                        </div>
+                        <div class="desc_contact">
+                            22-18, Yeonnam-ro, 3-gil, Mapo-gu, Seoul(03900)
+                        </div>
+                    </div>
+                    <div class="members">
+                        <div id="hyuk" class="info">
+                            <img src="./asset/hyuk.png">
+                            <div class="name">
+                                HYUK
+                            </div>
+                            <div class="phone">
+                                +82<br>01<br>6766<br>1453
+                            </div>
+                        </div>
+                        <div id="sol" class="info">
+                            <img src="./asset/sol.png" alt="">
+                            <div class="name">
+                                SOL
+                            </div>
+                            <div class="phone">
+                                +82<br>01<br>7285<br>0320
+                            </div>
+                        </div>
+                        <div id="shin" class="info">
+                            <img src="https://scontent-icn1-1.cdninstagram.com/t51.2885-19/s320x320/22069539_494827694213089_8093134024064630784_n.jpg" alt="">
+                            <div class="name">
+                                SHIN
+                            </div>
+                            <div class="phone">
+                                +82<br>01<br>4767<br>4207
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="img_block">
+                <div class="img_wrapper">
+                    <div id="1" class="item_img"> </div>
+                    <div class="item_img_desc">
+                        item image is from Paris
+                    </div>
+                </div>
+            </div>
+            <div class="img_block">
+                <div class="img_wrapper">
+                    <div id="2" class="item_img"> </div>
+                    <div class="item_img_desc">
+                        item image is from Paris
+                    </div>
+                </div>
+            </div>
+            <div class="img_block">
+                <div class="img_wrapper">
+                    <div id="3" class="item_img"> </div>
+                    <div class="item_img_desc">
+                        item image is from Paris
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+
+        </div>
+        <script type="text/javascript">
+            leftmargins = [0, 120, 240, 360, 480, 600]
+            r = Math.floor(Math.random() * 4)
+            leftmargin = leftmargins[r] + 'px'
+            document.getElementsByClassName('img_wrapper')[0].style.marginLeft = leftmargin
+        </script>
+    </body>
+</html>
