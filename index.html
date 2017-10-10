@@ -2,7 +2,9 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title></title>
+        <title>Jakupsil</title>
+        <link rel="stylesheet" href="./node_modules/tippy.js/dist/tippy.css">
+        <script src="./node_modules/tippy.js/dist/tippy.min.js"></script>
         <style media="screen">
             .content {
                 margin: 110px;
@@ -48,6 +50,15 @@
             }
             .init_block_item#info .contact .desc_contact:hover {
                 text-decoration: underline;
+            }
+            .enter {
+                background-color: #394247;
+                /*box-shadow: 0px 3px 5px rgba(0,0,0, 0.25);*/
+            }
+            .tippy-tooltip-content {
+                font-family: 'GothamLight';
+                font-size: 12px;
+                cursor: default;
             }
             .init_block_item#info .members {
                 margin-top: 46px;
@@ -145,7 +156,7 @@
                             CONTACT.
                         </div>
                         <a target="_blank" href="https://www.google.co.kr/maps/place/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C+%EB%A7%88%ED%8F%AC%EA%B5%AC+%EC%97%B0%EB%82%A8%EB%A1%9C3%EA%B8%B8+22-18/@37.5683822,126.9218576,15z/data=!4m5!3m4!1s0x357c98e7c9446725:0x14a3ff9bfb888b1!8m2!3d37.5615093!4d126.9207921?hl=ko">
-                            <div class="desc_contact">
+                            <div title="Click to open map >" class="desc_contact">
                                 22-18, Yeonnam-ro, 3-gil, Mapo-gu, Seoul(03900)
                             </div>
                         </a>
@@ -205,9 +216,7 @@
                     </div>
                 </div>
             </div>
-            <div class="footer">
-
-            </div>
+            <div class="footer"></div>
         </div>
 
         <script type="text/javascript">
@@ -219,6 +228,15 @@
                 document.getElementsByClassName('img_wrapper')[i].style.marginLeft = leftmargins[r] + 'px';
                 console.log(i)
             }
+
+            tippy(document.querySelector('.init_block_item#info .contact .desc_contact'),
+                {
+                  position: 'left',
+                  animation: 'shift',
+                  theme: 'transparent',
+                  interactive: true
+                }
+            )
         </script>
     </body>
 </html>
