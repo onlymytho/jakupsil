@@ -1,6 +1,6 @@
 html {
     height: 100%;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 body {
     height: 100%;
@@ -8,15 +8,10 @@ body {
     margin: 0;
 }
 .content {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    overflow: auto;
     margin-left: 110px;
     width: calc(100% - 220px);
     color: #59646A;
+    overflow: auto;
 }
 ::-webkit-scrollbar {
     display: none;
@@ -34,6 +29,7 @@ a {
 .init_block_item#info {
     float: right;
     width: 220px;
+    height: 100%;
     position: fixed;
     right: 110px;
 }
@@ -54,7 +50,6 @@ a {
 }
 .init_block_item#info .info_item#contact .title{
     margin-top: 80px;
-
 }
 .init_block_item#info .info_item#contact .desc_contact{
     font-family: "GothamLight";
@@ -115,7 +110,7 @@ a {
     text-align: center;
 }
 .init_block_item#info .info_item#reservation .title {
-    margin-top: 46px;
+    margin-top: 80px;
 }
 
 .img_block {
