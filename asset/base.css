@@ -18,6 +18,7 @@ body {
 }
 a {
     text-decoration: none;
+    cursor: pointer;
 }
 .init_block_item {
     display: inline-block;
@@ -40,7 +41,11 @@ a {
     color: #394247;
     cursor: default;
 }
+.init_block_item#info a .info_item#title {
+    cursor: pointer;
+}
 .init_block_item#info .info_item .title {
+    margin-top: 46px;
     margin-bottom: 10px;
     font-family: "Gotham";
     font-weight: Bold;
@@ -192,8 +197,11 @@ input {
     font-size: 12px;
     margin-top: 12px;
     width: 100%;
-
 }
+/*input#name, input#phone {
+    display: inline-block;
+    width: 100px;
+}*/
 button {
     width: 100%;
     border: none;
