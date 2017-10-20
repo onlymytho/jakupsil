@@ -10,7 +10,30 @@
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script src="https://afarkas.github.io/webshim/js-webshim/minified/polyfiller.js"></script>
 
+        <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script type="text/javascript">
+           (function(){
+              emailjs.init("user_SrwuDhdxfbpjOtsNl1l2G");
+           })();
+           var sendMail = function() {
+               emailjs.send("sanghyuk_jung","jakupsil",{
+                    name: document.querySelector('input#name').value,
+                    phone: document.querySelector('input#phone').value,
+                    email: document.querySelector('input#email').value,
+                    date: document.querySelector('input#date').value
+               })
+               .then(
+                   function(response) {
+                       console.log("SUCCESS", response);
+                   },
+                   function(error) {
+                       console.log("FAILED", error);
+                   }
+               );
+           }
+        </script>
         <script>
+
 
             var reserve_submit = function() {
                     for (i=0; i<document.querySelectorAll('form input').length; i++) {
@@ -22,6 +45,7 @@
                             continue
                         }
                     }
+                    sendMail()
                     alert('예약신청이 접수되었습니다. 빠른 시일 내에 연락드리곘습니다. 감사합니다.')
                     return true
             }
@@ -92,7 +116,7 @@
                         <div class="reserve_form">
                             <form action="#" class="reserve_form">
                                 <div id="reserve_calendar" class="form_item">
-                                    <input type="date" name="날짜"class="date_picker">
+                                    <input id="date" type="date" name="날짜"class="date_picker">
                                 </div>
                                 <input id="name" type="text" name="이름" value="" placeholder="NAME" required>
                                 <input id="phone" type="tel" name="휴대폰 번호" value="" placeholder="PHONE">
