@@ -5,9 +5,14 @@
         <title>Jakupsil</title>
         <!-- <link rel="stylesheet" href="https://unpkg.com/tippy.js@1.3.0/dist/tippy.css">
         <script src="https://unpkg.com/tippy.js@1.3.0/dist/tippy.min.js"></script> -->
-        <link rel="stylesheet" href="./asset/base.css"></style>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" media="screen and (min-width: 800px)" href="./asset/base.css" />
+        <link rel='stylesheet' media="screen and (max-width: 800px)" href='./asset/mobile_base.css' />
         <script type="text/javascript">
             function insert_members() {
+                /*
+                    Shuffle the order of members information
+                */
                 var hyuk = "<div id='hyuk' class='info'><img src='./asset/hyuk.png'><div class='name'>HYUK</div><div class='phone'>+82<br>10<br>6766<br>1453</div></div>"
                 var sol = "<div id='sol' class='info'><img src='./asset/sol.png'><div class='name'>SOL</div><div class='phone'>+82<br>10<br>7285<br>0320</div></div>"
                 var shin = "<div id='shin' class='info'><img src='https://scontent-icn1-1.cdninstagram.com/t51.2885-19/s320x320/22069539_494827694213089_8093134024064630784_n.jpg'><div class='name'>SHIN</div><div class='phone'>+82<br>10<br>4787<br>4207</div></div>"
@@ -32,13 +37,6 @@
     <body>
         <div class="content">
             <div class="init_block">
-                <div id="img" class="init_block_item">
-                    <div id="init" class="item_img" src="https://scontent-hkg3-1.cdninstagram.com/t51.2885-15/e35/22157185_1876354229284743_4635429160280391680_n.jpg"> </div>
-
-                    <div class="item_img_desc">
-                        2017.10.09 We want to make our website.
-                    </div>
-                </div>
                 <div id="info" class="init_block_item">
                     <a href="index.html">
                         <div id="title" class="info_item">
@@ -77,6 +75,14 @@
                     </div> -->
 
                 </div>
+                <div id="img" class="init_block_item">
+                    <div id="init" class="item_img" src="https://scontent-hkg3-1.cdninstagram.com/t51.2885-15/e35/22157185_1876354229284743_4635429160280391680_n.jpg"> </div>
+
+                    <div class="item_img_desc">
+                        2017.10.09 We want to make our website.
+                    </div>
+                </div>
+
             </div>
             <div class="img_block">
                 <div class="img_wrapper">
