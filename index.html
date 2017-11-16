@@ -88,34 +88,12 @@
                 </div>
 
             </div>
-            <div class="img_block">
-                <div class="img_wrapper">
-                    <div id="img1" class="item_img"> </div>
-                    <div class="item_img_desc">
-                        item image is from Paris
-                    </div>
-                </div>
-            </div>
-            <div class="img_block">
-                <div class="img_wrapper">
-                    <div id="2" class="item_img"> </div>
-                    <div class="item_img_desc">
-                        item image is from Paris
-                    </div>
-                </div>
-            </div>
-            <div class="img_block">
-                <div class="img_wrapper">
-                    <div id="3" class="item_img"> </div>
-                    <div class="item_img_desc">
-                        item image is from Paris
-                    </div>
-                </div>
-            </div>
+
             <div class="footer"></div>
         </div>
 
         <script type="text/javascript">
+            // Insert tooltips
             // tippy(document.querySelector('.init_block_item#info .contact .desc_contact'),
             //     {
             //       position: 'left',
@@ -124,6 +102,46 @@
             //       interactive: true
             //     }
             // )
+        </script>
+
+        <script type="text/javascript">
+            // Create image blocks
+            // var images = document.body.getElementsByClassName('item_img')
+            var content_block = document.body.getElementsByClassName('content').
+            var item_img_descs = [
+                'item image is from Paris',
+                'adsqeqerqqf',
+                'odopojq',
+                'nmcnzqq12',
+                'sadf',
+                'adsfsaf',
+                'nvjuqsj',
+                'dfdf',
+                'opqsxdafaf'
+            ]
+            var img_count = 9
+            for (i=0; i<img_count; i++){
+                var img_block = document.createElement('div') // Create img_block
+                img_block.className = 'img_block'
+                var img_wrapper = document.createElement('div') // Create img_wrapper in img_block
+                img_wrapper.className = 'img_wrapper'
+                var item_img = document.createElement('div') // Create item_img in img_wrapper
+                item_img.className = 'item_img'
+                var item_img_desc = document.createElement('div') // Create item_img_desc in img_wrapper
+                var textnode = document.createTextNode(item_img_descs[i]);
+
+                // Make block structure
+                img_wrapper.appendChild(item_img)
+                img_wrapper.appendChild(item_img_desc)
+                img_block.appendChild(img_wrapper)
+                content_block.appendChild(img_block)
+
+                // Insert images and descs
+                item_img.style.background = 'url('+'./asset/'+(i+1)'.png)'
+                img_item_desc.appendChild(textnode);
+            }
+
+
         </script>
     </body>
 </html>
