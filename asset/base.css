@@ -54,8 +54,7 @@ a {
 .init_block_item#info .info_item .title {
     margin-top: 46px;
     margin-bottom: 10px;
-    font-family: "Gotham";
-    font-weight: Bold;
+    font-family: "GothamBold";
     font-size: 12px;
     color: #394247;
     cursor: default;
