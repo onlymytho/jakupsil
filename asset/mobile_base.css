@@ -159,6 +159,7 @@ input {
     border-bottom: 1px solid #f7f8f9;
     font-size: 12px;
     margin-top: 12px;
+    padding: 0px;
     width: 100%;
 }
 button#submit {
