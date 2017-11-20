@@ -5,39 +5,66 @@
         <title>Jakupsil</title>
         <!-- <link rel="stylesheet" href="https://unpkg.com/tippy.js@1.3.0/dist/tippy.css">
         <script src="https://unpkg.com/tippy.js@1.3.0/dist/tippy.min.js"></script> -->
-        <link rel="stylesheet" href="./asset/base.css"></style>
 
+        <!-- og tags -->
+        <meta property="og:title" content="JAKUPSIL IN YEONNAM">
+        <meta property="og:url" content="http://jakupsil.com/">
+        <meta property="og:image" content="https://scontent-hkg3-1.cdninstagram.com/t51.2885-15/e35/22157185_1876354229284743_4635429160280391680_n.jpg">
+
+        <!-- Stylesheet -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" media="screen and (min-width: 800px)" href="./asset/base.css" />
+        <link rel='stylesheet' media="screen and (max-width: 800px)" href='./asset/mobile_base.css' />
+
+        <!-- GA: Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-63621212-4"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-63621212-4');
+        </script>
+
+        <!-- Import libraries -->
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script src="https://afarkas.github.io/webshim/js-webshim/minified/polyfiller.js"></script>
-
         <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+        <!-- Functions -->
         <script type="text/javascript">
-           (function(){
-              emailjs.init("user_SrwuDhdxfbpjOtsNl1l2G");
-           })();
-           var sendMail = function() {
-               emailjs.send("sanghyuk_jung","jakupsil",{
+            (function(){
+                emailjs.init("user_SrwuDhdxfbpjOtsNl1l2G");
+            })();
+            var sendMail = function() {
+                /*
+                    Send email by using emailjs.
+                */
+
+                // Send input data as sanghyuk_jung user and jakupsil template with name, phone, email and date parameters.
+                emailjs.send("sanghyuk_jung","jakupsil",{
                     name: document.querySelector('input#name').value,
                     phone: document.querySelector('input#phone').value,
                     email: document.querySelector('input#email').value,
                     date: document.querySelector('input#date').value
-               })
-               .then(
-                   function(response) {
-                       console.log("SUCCESS", response);
-                   },
-                   function(error) {
-                       console.log("FAILED", error);
-                   }
-               );
-           }
-        </script>
-        <script>
-
-
+                })
+                .then(
+                    function(response) {
+                        console.log("SUCCESS", response);
+                    },
+                    function(error) {
+                        console.log("FAILED", error);
+                    }
+                );
+            };
             var reserve_submit = function() {
+                    /*
+                        Validate inputs and if all is filled, send email.
+                    */
+                    // Validate inputs
                     for (i=0; i<document.querySelectorAll('form input').length; i++) {
                         if (document.querySelectorAll('form input')[i].value == "") {
+                            // If there's an empty input, show alert
                             alert('항목을 모두 입력해주세요. (' + document.querySelectorAll('form input')[i].name + ')')
                             return false
                         }
@@ -45,52 +72,35 @@
                             continue
                         }
                     }
+                    // If all input is filled, send email
                     sendMail()
                     alert('예약신청이 접수되었습니다. 빠른 시일 내에 연락드리곘습니다. 감사합니다.')
                     return true
             }
 
-            //request the features you need:
-            webshim.polyfill('es5 mediaelement forms');
-
-            $(function(){
-            // use all implemented API-features on DOM-ready
-            });
-            webshim.setOptions('forms-ext', {
-                replaceUI: 'auto',
-                types: 'date',
-                date: {
-                    startView: 2,
-                    inlinePicker: true,
-                    classes: 'date_picker'
+            // Calendar UI by using webshim library
+            var calendar = function() {
+                webshim.polyfill('es5 mediaelement forms');
+                webshim.setOptions('forms-ext', {
+                    replaceUI: 'auto',
+                    types: 'date',
+                    date: {
+                        startView: 2,
+                        inlinePicker: true,
+                        classes: 'date_picker'
+                }
+                });
+                //start polyfilling
+                webshim.polyfill('forms forms-ext');
             }
-            });
-            //start polyfilling
-            webshim.polyfill('forms forms-ext');
+            calendar()
 
-            // //only last example using format display
-            // $(function () {
-            //     $('.format-date').each(function () {
-            //         var $display = $('.date-display', this);
-            //         $(this).on('change', function (e) {
-            //             //webshim.format will automatically format date to according to webshim.activeLang or the browsers locale
-            //             var localizedDate = webshim.format.date($.prop(e.target, 'value'));
-            //             $display.html(localizedDate);
-            //         });
-            //     });
-            // });
+
         </script>
     </head>
     <body>
         <div class="content">
             <div class="init_block">
-                <div id="img" class="init_block_item">
-                    <div id="init" class="item_img" src="https://scontent-hkg3-1.cdninstagram.com/t51.2885-15/e35/22157185_1876354229284743_4635429160280391680_n.jpg"> </div>
-
-                    <div class="item_img_desc">
-                        2017.10.09 We want to make our website.
-                    </div>
-                </div>
                 <div id="info" class="init_block_item">
                     <a href="index.html">
                         <div id="title" class="info_item">
@@ -101,13 +111,11 @@
                         <div class="title">
                             REVIEW.
                         </div>
-                        <a target="_blank" href="https://www.google.co.kr/maps/place/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C+%EB%A7%88%ED%8F%AC%EA%B5%AC+%EC%97%B0%EB%82%A8%EB%A1%9C3%EA%B8%B8+22-18/@37.5683822,126.9218576,15z/data=!4m5!3m4!1s0x357c98e7c9446725:0x14a3ff9bfb888b1!8m2!3d37.5615093!4d126.9207921?hl=ko">
-                            <div class="desc_contact">
-                                - 여기서 실패하면 그 사람이 잘못된 거에요!<br>
-                                - 여자친구가 너무 좋아하네요ㅎㅎ<br>
-                                - 대박입니다. 대성공이에요ㅜㅜ
-                            </div>
-                        </a>
+                        <div class="desc_contact">
+                            - 여기서 실패하면 그 사람이 잘못된 거에요!<br>
+                            - 여자친구가 너무 좋아하네요ㅎㅎ<br>
+                            - 대박입니다. 대성공이에요ㅜㅜ
+                        </div>
                     </div> -->
                     <div id='reservation' class="info_item">
                         <div class="title">
@@ -126,26 +134,17 @@
                         </div>
                     </div>
                 </div>
+                <div id="img" class="init_block_item">
+                    <div id="init" class="item_img" src="https://scontent-hkg3-1.cdninstagram.com/t51.2885-15/e35/22157185_1876354229284743_4635429160280391680_n.jpg"> </div>
+
+                    <div class="item_img_desc">
+                        2017.10.09 We want to make our website.
+                    </div>
+                </div>
             </div>
             <div class="img_block">
                 <div class="img_wrapper">
                     <div id="img1" class="item_img"> </div>
-                    <div class="item_img_desc">
-                        item image is from Paris
-                    </div>
-                </div>
-            </div>
-            <div class="img_block">
-                <div class="img_wrapper">
-                    <div id="2" class="item_img"> </div>
-                    <div class="item_img_desc">
-                        item image is from Paris
-                    </div>
-                </div>
-            </div>
-            <div class="img_block">
-                <div class="img_wrapper">
-                    <div id="3" class="item_img"> </div>
                     <div class="item_img_desc">
                         item image is from Paris
                     </div>

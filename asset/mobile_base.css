@@ -34,7 +34,7 @@ a {
 
 }
 .init_block_item#info {
-    width: 220px;
+    width: 100%;
     height: 100%;
 }
 .init_block_item#info .info_item#title{
@@ -151,36 +151,7 @@ a {
 span.input-buttons {
     display: none;
 }
-input[type="date"].date_picker {
-    display: none !important;
-}
 
-input.ws-date, button.ws-popover-opener{
-    display: none;
-}
-div.ws-po-box {
-    width: calc(220px - 24px);
-    padding: 12px;
-}
-
-.input-picker .ws-picker-controls>button {
-    background: none;
-    border: none;
-}
-.input-picker .ws-picker-body {
-
-}
-.input-picker abbr[title] {
-    text-decoration: none;
-}
-.input-picker .picker-list.day-list td>button {
-    width: 22px;
-    height: 22px;
-    outline: none;
-}
-.input-picker .ws-button-row {
-    display: none;
-}
 
 input {
     outline: none;
