@@ -14,6 +14,43 @@ body {
     overflow: auto;
     margin: 0;
 }
+
+.topnavi {
+    top: 0;
+    width: calc(100% - 80px);
+    position: fixed;
+    padding: 24px 40px;
+    border-bottom: 1px solid #f7f8f9;
+    background-color: white;
+    transition: all ease 0.4s;
+    opacity: 0;
+    height: 0;
+}
+.topnavi.show {
+    opacity: 1;
+    height: auto;
+}
+.topnavi div {
+    display: inline-block;
+}
+.topnavi .title {
+    float: left;
+    font-family: "GothamBlack";
+    font-weight: 500;
+    font-size: 12px;
+    color: #394247;
+    cursor: default;
+    vertical-align: middle;
+}
+.topnavi .reserve {
+    float: right;
+    font-family: "GothamBold";
+    font-size: 12px;
+    color: #394247;
+    cursor: default;
+    vertical-align: middle;
+}
+
 .content {
     margin: 40px;
     color: #59646A;
