@@ -1,6 +1,8 @@
+var topnavi_switch = false
 
 var topnavi_create = function(link) {
-    if (window.innerWidth <= 800) {
+    if (window.innerWidth <= 800 && topnavi_switch == false) {
+        topnavi_switch = true;
         button_links_by_url = {
             "index": "event.html",
             "event": "#title"
@@ -38,11 +40,11 @@ var controlled_scrolly_by_url = {
     "index": 650,
     "event": 500
 }
-
 var topnavi_control = function(show_scrollY) {
-    if (window.innerWidth <= 800) {
+    if (window.innerWidth <= 800 ) {
         if (window.scrollY > show_scrollY) {
           document.getElementsByClassName('topnavi')[0].classList.add('show')
+          topnavi_switch = true;
         }
         else {
           document.getElementsByClassName('topnavi')[0].classList.remove('show')
