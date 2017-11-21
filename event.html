@@ -32,19 +32,7 @@
         <script type="text/javascript" src="./js/webshim_calendar.js"></script>
         <script type="text/javascript" src="./js/reserve.js"></script>
     </head>
-    <body onscroll="topnavi_control(500)">
-        <div class="topnavi">
-            <a href="index.html">
-                <div class="title">
-                    JAKUPSIL IN YEONNAM
-                </div>
-            </a>
-            <a href="#title">
-                <div class="reserve">
-                    RESERVE >
-                </div>
-            </a>
-        </div>
+    <body onscroll="topnavi_create('event'); topnavi_control(controlled_scrolly_by_url['event']);">
         <div class="content">
             <div class="init_block">
                 <div id="info" class="init_block_item">
@@ -100,7 +88,7 @@
         </div>
 
         <!-- Functions -->
-        <script type="text/javascript" src="./js/suffle_image_positions.js"></script>
+        <script type="text/javascript" src="./js/shuffle_image_positions.js"></script>
         <script type="text/javascript" src='./js/scroll_topnavi.js'></script>
     </body>
 </html>
