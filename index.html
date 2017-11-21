@@ -53,7 +53,19 @@
             }
         </script>
     </head>
-    <body>
+    <body onscroll="topnavi_control(650)">
+        <div class="topnavi">
+            <a href="index.html">
+                <div class="title">
+                    JAKUPSIL IN YEONNAM
+                </div>
+            </a>
+            <a href="event.html">
+                <div class="reserve">
+                    I WANT TO USE >
+                </div>
+            </a>
+        </div>
         <div class="content">
             <div class="init_block">
                 <div id="info" class="init_block_item">
@@ -156,8 +168,8 @@
                 item_img.style.backgroundImage = 'url(./asset/story/'+(i+1)+'.jpg)'
                 item_img_desc.appendChild(textnode);
             }
-
-
         </script>
+        <script type="text/javascript" src='./js/scroll_topnavi.js'></script>
+
     </body>
 </html>
