@@ -1,3 +1,4 @@
+
 // Create image blocks
 var content_block = document.body.getElementsByClassName('content')[0]
 var item_img_descs = [
