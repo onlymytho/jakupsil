@@ -3,8 +3,6 @@
     <head>
         <meta charset="utf-8">
         <title>Jakupsil</title>
-        <!-- <link rel="stylesheet" href="https://unpkg.com/tippy.js@1.3.0/dist/tippy.css">
-        <script src="https://unpkg.com/tippy.js@1.3.0/dist/tippy.min.js"></script> -->
 
         <!-- og tags -->
         <meta property="og:title" content="JAKUPSIL IN YEONNAM">
@@ -29,74 +27,10 @@
         <!-- Import libraries -->
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script src="https://afarkas.github.io/webshim/js-webshim/minified/polyfiller.js"></script>
-        <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
         <!-- Functions -->
-        <script type="text/javascript">
-            (function(){
-                emailjs.init("user_SrwuDhdxfbpjOtsNl1l2G");
-            })();
-            var sendMail = function() {
-                /*
-                    Send email by using emailjs.
-                */
-
-                // Send input data as sanghyuk_jung user and jakupsil template with name, phone, email and date parameters.
-                emailjs.send("sanghyuk_jung","jakupsil",{
-                    name: document.querySelector('input#name').value,
-                    phone: document.querySelector('input#phone').value,
-                    email: document.querySelector('input#email').value,
-                    date: document.querySelector('input#date').value
-                })
-                .then(
-                    function(response) {
-                        console.log("SUCCESS", response);
-                    },
-                    function(error) {
-                        console.log("FAILED", error);
-                    }
-                );
-            };
-            var reserve_submit = function() {
-                    /*
-                        Validate inputs and if all is filled, send email.
-                    */
-                    // Validate inputs
-                    for (i=0; i<document.querySelectorAll('form input').length; i++) {
-                        if (document.querySelectorAll('form input')[i].value == "") {
-                            // If there's an empty input, show alert
-                            alert('항목을 모두 입력해주세요. (' + document.querySelectorAll('form input')[i].name + ')')
-                            return false
-                        }
-                        else {
-                            continue
-                        }
-                    }
-                    // If all input is filled, send email
-                    sendMail()
-                    alert('예약신청이 접수되었습니다. 빠른 시일 내에 연락드리곘습니다. 감사합니다.')
-                    return true
-            }
-
-            // Calendar UI by using webshim library
-            var calendar = function() {
-                webshim.polyfill('es5 mediaelement forms');
-                webshim.setOptions('forms-ext', {
-                    replaceUI: 'auto',
-                    types: 'date',
-                    date: {
-                        startView: 2,
-                        inlinePicker: true,
-                        classes: 'date_picker'
-                }
-                });
-                //start polyfilling
-                webshim.polyfill('forms forms-ext');
-            }
-            calendar()
-
-
-        </script>
+        <script type="text/javascript" src="./js/webshim_calendar.js"></script>
+        <script type="text/javascript" src="./js/reserve.js"></script>
     </head>
     <body onscroll="topnavi_control(500)">
         <div class="topnavi">
@@ -165,24 +99,8 @@
             <div class="footer"></div>
         </div>
 
-        <script type="text/javascript">
-            // Shuffle the position of images
-            let content_width = window.getComputedStyle(document.getElementsByClassName('content')[0]).getPropertyValue('width').split("px")[0]
-
-            leftmargins = [1, 2, 'center']
-            for (var i=0; i<document.getElementsByClassName('img_wrapper').length; i++){
-                r = Math.floor(Math.random() * 4)
-                leftmargin = leftmargins[r]
-
-                if (leftmargin == 'center') {
-                    document.getElementsByClassName('img_wrapper')[i].style.margin = '0 auto'
-                }
-                if (leftmargin == 'right'){
-                    document.getElementsByClassName('img_wrapper')[i].style.float = 'left'
-                    // document.getElementsByClassName('img_wrapper')[i].style.marginLeft = leftmargin + 'px';
-                }
-            }
-        </script>
+        <!-- Functions -->
+        <script type="text/javascript" src="./js/suffle_image_positions.js"></script>
         <script type="text/javascript" src='./js/scroll_topnavi.js'></script>
     </body>
 </html>
