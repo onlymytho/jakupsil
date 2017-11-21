@@ -3,8 +3,6 @@
     <head>
         <meta charset="utf-8">
         <title>Jakupsil</title>
-        <!-- <link rel="stylesheet" href="https://unpkg.com/tippy.js@1.3.0/dist/tippy.css">
-        <script src="https://unpkg.com/tippy.js@1.3.0/dist/tippy.min.js"></script> -->
 
         <!-- og tags -->
         <meta property="og:title" content="JAKUPSIL IN YEONNAM">
@@ -26,32 +24,9 @@
           gtag('config', 'UA-63621212-4');
         </script>
 
-        <!-- custom functions -->
-        <script type="text/javascript">
-            function insert_members() {
-                /*
-                    Shuffle the order of members information
-                */
-                var hyuk = "<div id='hyuk' class='info'><img src='./asset/hyuk.png'><div class='name'>HYUK</div><div class='phone'>+82<br>10<br>6766<br>1453</div></div>"
-                var sol = "<div id='sol' class='info'><img src='./asset/sol.png'><div class='name'>SOL</div><div class='phone'>+82<br>10<br>7285<br>0320</div></div>"
-                var shin = "<div id='shin' class='info'><img src='https://scontent-icn1-1.cdninstagram.com/t51.2885-19/s320x320/22069539_494827694213089_8093134024064630784_n.jpg'><div class='name'>SHIN</div><div class='phone'>+82<br>10<br>4787<br>4207</div></div>"
-                var members = [hyuk, sol, shin]
+        <!-- Custom functions -->
+        <script type="text/javascript" src="./js/shuffle_members.js"></script>
 
-                function shuffleArray(array) {
-                    for (var i = array.length - 1; i > 0; i--) {
-                        var j = Math.floor(Math.random() * (i + 1));
-                        var temp = array[i];
-                        array[i] = array[j];
-                        array[j] = temp;
-                    }
-                }
-                shuffleArray(members)
-                for (member in members) {
-                    var target = document.querySelector('.info_item#members')
-                    target.insertAdjacentHTML( 'beforeend', members[member]);
-                }
-            }
-        </script>
     </head>
     <body onscroll="topnavi_control(650)">
         <div class="topnavi">
@@ -99,77 +74,19 @@
                             </div>
                         </a>
                     </div>
-                    <!-- <div id='reservation' class="info_item">
-                        <div class="title" style="margin:0; cursor: pointer;">
-                            RESERVATION >
-                        </div>
-                    </div> -->
-
                 </div>
                 <div id="img" class="init_block_item">
-                    <div id="init" class="item_img" src="https://scontent-hkg3-1.cdninstagram.com/t51.2885-15/e35/22157185_1876354229284743_4635429160280391680_n.jpg"> </div>
-
-                    <div class="item_img_desc">
+                    <div id="init" class="item_img" src="https://scontent-hkg3-1.cdninstagram.com/t51.2885-15/e35/22157185_1876354229284743_4635429160280391680_n.jpg">
+                    </div>
                         2017.10.09 We want to make our website.
                     </div>
                 </div>
-
             </div>
-
-
         </div>
         <div class="footer"></div>
-        <script type="text/javascript">
-            // Insert tooltips
-            // tippy(document.querySelector('.init_block_item#info .contact .desc_contact'),
-            //     {
-            //       position: 'left',
-            //       animation: 'shift',
-            //       theme: 'transparent',
-            //       interactive: true
-            //     }
-            // )
-        </script>
-
-        <script type="text/javascript">
-            // Create image blocks
-            // var images = document.body.getElementsByClassName('item_img')
-            var content_block = document.body.getElementsByClassName('content')[0]
-            var item_img_descs = [
-                '2016.04.22 Liquor',
-                '2016.12.11 Window, red light',
-                '2016.12.11 Our members - Sanghyuk / Shin / Sol',
-                '2016.12.18 Drying white walls',
-                '2017.02.12 Food with wine',
-                '2017.04.22 Areca palm',
-                '2017.09.30 Propose in ',
-                '2017.10.08 Mirror ball & Beam projector',
-                '2017.11.12 Four shoes'
-            ]
-            var img_count = 9
-            for (i=0; i<img_count; i++){
-                var img_block = document.createElement('div') // Create img_block
-                img_block.className = 'img_block'
-                var img_wrapper = document.createElement('div') // Create img_wrapper in img_block
-                img_wrapper.className = 'img_wrapper'
-                var item_img = document.createElement('div') // Create item_img in img_wrapper
-                item_img.className = 'item_img'
-                var item_img_desc = document.createElement('div') // Create item_img_desc in img_wrapper
-                item_img_desc.className = 'item_img_desc'
-                var textnode = document.createTextNode(item_img_descs[i]);
-
-                // Make block structure
-                img_wrapper.appendChild(item_img)
-                img_wrapper.appendChild(item_img_desc)
-                img_block.appendChild(img_wrapper)
-                content_block.appendChild(img_block)
-
-                // Insert images and descs
-                item_img.style.backgroundImage = 'url(./asset/story/'+(i+1)+'.jpg)'
-                item_img_desc.appendChild(textnode);
-            }
-        </script>
+        <!-- custom functions -->
+        <script type="text/javascript" src="./js/insert_story.js"></script>
         <script type="text/javascript" src='./js/scroll_topnavi.js'></script>
-
+        <!-- <script type='text/javascript' src='./js/tooltips.js'></script>  // Omitted by request-->
     </body>
 </html>
