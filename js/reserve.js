@@ -26,6 +26,10 @@ var reserve_submit = function() {
         /*
             Validate inputs and if all is filled, send email.
         */
+
+        // Send Facebook Event Tracking Code
+        fbq('track', 'CompleteRegistration');
+
         // Validate inputs
         for (i=0; i<document.querySelectorAll('form input').length; i++) {
             if (document.querySelectorAll('form input')[i].value == "") {
