@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_speaker_off</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ic_speaker_off">
+            <g transform="translate(3.000000, 3.000000)">
+                <rect x="0" y="0" width="20" height="20"></rect>
+                <path d="M15.6499133,8.5485065 L15.6499133,12.2944642" id="Line" stroke="#394247" stroke-width="1.38461538" stroke-linecap="round" stroke-linejoin="round" transform="translate(15.649913, 10.413308) rotate(-315.000000) translate(-15.649913, -10.413308) "></path>
+                <path d="M17.2451461,10.2948751 L13.4991883,10.2948751" id="Line" stroke="#394247" stroke-width="1.38461538" stroke-linecap="round" stroke-linejoin="round" transform="translate(15.372167, 10.679491) rotate(-315.000000) translate(-15.372167, -10.679491) "></path>
+                <polygon id="Path" stroke="#394247" stroke-width="1.38461538" stroke-linecap="round" stroke-linejoin="round" points="2.30769231 8.49838384 5.38461538 8.05355977 10 5.38461538 10 14.6153846 5.38461538 12.3905944 2.30769231 11.8345643"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

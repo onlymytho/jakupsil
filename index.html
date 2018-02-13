@@ -47,6 +47,10 @@
         <script type="text/javascript" src="./js/shuffle_members.js"></script>
     </head>
     <body onscroll="topnavi_create('index'); topnavi_control(controlled_scrolly_by_url['index']); ">
+        <div class="bgm">
+            <button class="icon on" onclick="this.classList.toggle('on'); var audio = document.getElementById('bgm'); if(this.classList.contains('on')){audio.play()} else {audio.pause()};"></button>
+            <audio autoplay id="bgm" preload="auto" src="https://api.soundcloud.com/tracks/316141246/stream?client_id=cmSmzlorE2Sydh0SPDX285qwjVf9bQxJ"></audio>
+        </div>
         <div class="content">
             <div class="init_block">
                 <div id="info" class="init_block_item">

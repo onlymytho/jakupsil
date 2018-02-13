@@ -14,6 +14,23 @@ body {
     overflow: auto;
     margin: 0;
 }
+.bgm {
+    position: fixed;
+    top:20px; right:20px;
+    width: 28px;
+    height: 28px;
+}
+.bgm .icon {
+    height: 100%;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background-image: url('ic_speaker_off.svg');
+}
+.bgm .icon.on {
+    background-image: url('ic_speaker_on.svg');
+}
 .content {
     margin-left: 110px;
     width: calc(100% - 220px);
