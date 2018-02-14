@@ -51,6 +51,23 @@ body {
     vertical-align: middle;
 }
 
+.bgm {
+    position: fixed;
+    top:20px; right:20px;
+    width: 28px;
+    height: 28px;
+}
+.bgm .icon {
+    height: 100%;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background-image: url('ic_speaker_off.svg');
+}
+.bgm .icon.on {
+    background-image: url('ic_speaker_on.svg');
+}
 .content {
     margin: 40px;
     color: #59646A;
