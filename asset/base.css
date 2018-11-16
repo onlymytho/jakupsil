@@ -100,6 +100,7 @@ a {
 }
 .init_block_item#info .info_item#members .title {
     margin-top: 46px;
+    margin-bottom: 15px;
 }
 .init_block_item#info .info_item#members .info {
     display: inline-block;
@@ -125,7 +126,6 @@ a {
     margin-top: 8px;
     text-align: center;
     font-family: "GothamMedium";
-    font-style: italic;
     font-weight: 500;
     font-size: 12px;
 }
@@ -142,7 +142,7 @@ a {
 }
 
 .img_block {
-    margin-top: 25vh;
+    margin-top: 15vh;
 }
 .img_block .item_wrapper {
     width: 640px;
@@ -168,9 +168,9 @@ a {
     background: url()
 }
 .item_img_desc {
-    font-family: Courier;
+    font-family: GothamBook;
     margin-top: 8px;
-    font-size: 13px;
+    font-size: 12px;
 }
 .footer {
     width: 100%;
