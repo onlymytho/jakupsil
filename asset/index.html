@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Jakupsil</title>
+        <link rel="shortcut icon" type="image/png" href="./asset/jakupsil.png"/>
+
+        <!-- og tags -->
+        <meta property="og:title" content="JAKUPSIL IN YEONNAM">
+        <meta property="og:url" content="http://jakupsil.com/">
+        <meta property="og:image" content="https://scontent-hkg3-1.cdninstagram.com/t51.2885-15/e35/22157185_1876354229284743_4635429160280391680_n.jpg">
+
+        <!-- Stylesheet -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" media="screen and (min-width: 800px)" href="./asset/base.css" />
+        <link rel='stylesheet' media="screen and (max-width: 800px)" href='./asset/mobile_base.css' />
+
+        <!-- GA: Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-63621212-4"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-63621212-4');
+        </script>
+
+        <!-- Facebook Pixel Code -->
+        <script>
+          !function(f,b,e,v,n,t,s)
+          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+          n.queue=[];t=b.createElement(e);t.async=!0;
+          t.src=v;s=b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t,s)}(window, document,'script',
+          'https://connect.facebook.net/en_US/fbevents.js');
+          fbq('init', '1623228377714782');
+          fbq('track', 'PageView');
+        </script>
+        <noscript><img height="1" width="1" style="display:none"
+          src="https://www.facebook.com/tr?id=1623228377714782&ev=PageView&noscript=1"
+        /></noscript>
+        <!-- End Facebook Pixel Code -->
+
+        <!-- Custom functions -->
+        <script type="text/javascript" src="./js/shuffle_members.js"></script>
+    </head>
+    <body onscroll="topnavi_create('index'); topnavi_control(controlled_scrolly_by_url['index']); ">
+        <div class="bgm">
+            <button class="icon on" onclick="this.classList.toggle('on'); var audio = document.getElementById('bgm'); if(this.classList.contains('on')){audio.play()} else {audio.pause()};"></button>
+            <audio autoplay id="bgm" preload="auto" src="https://api.soundcloud.com/tracks/325430039/stream?client_id=cmSmzlorE2Sydh0SPDX285qwjVf9bQxJ"></audio>
+        </div>
+        <div class="content">
+            <div class="init_block">
+                <div id="info" class="init_block_item">
+                    <a href="index.html">
+                        <div id="title" class="info_item">
+                            JAKUPSIL<br>IN<br>YEONNAM
+                        </div>
+                    </a>
+                    <div id="contact" class=info_item>
+                        <div class="title">
+                            CONTACT
+                        </div>
+                        <a target="_blank" href="https://www.google.co.kr/maps/place/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C+%EB%A7%88%ED%8F%AC%EA%B5%AC+%EC%97%B0%EB%82%A8%EB%A1%9C3%EA%B8%B8+22-18/@37.5683822,126.9218576,15z/data=!4m5!3m4!1s0x357c98e7c9446725:0x14a3ff9bfb888b1!8m2!3d37.5615093!4d126.9207921?hl=ko">
+                            <div title="Click to open map >" class="desc_contact">
+                                22-18, Yeonnam-ro, 3-gil, Mapo-gu, Seoul(03900)
+                            </div>
+                        </a>
+                    </div>
+                    <div id='members' class="info_item">
+                        <div class="title">
+                            MEMBERS
+                        </div>
+                        <script type="text/javascript">
+                            insert_members()
+                        </script>
+                    </div>
+                    <div class="info_item">
+                        <a href="event.html">
+                            <div class="title" style="cursor: pointer;">
+                                I WANT TO USE JAKUPSIL >
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div id="img" class="init_block_item">
+                    <div id="init" class="item_img" src="https://scontent-hkg3-1.cdninstagram.com/t51.2885-15/e35/22157185_1876354229284743_4635429160280391680_n.jpg"> </div>
+                    <div class="item_img_desc">
+                        2017.10.09 We want to make our website
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer"></div>
+        <!-- custom functions -->
+        <script type="text/javascript" src="./js/insert_story.js"></script>
+        <script type="text/javascript" src='./js/scroll_topnavi.js'></script>
+        <!-- <script type='text/javascript' src='./js/tooltips.js'></script>  // Omitted by request-->
+        <script type="text/javascript" src="./js/zoom.js"></script>
+        <script type="text/javascript" src="./js/zoom_image.js"></script>
+    </body>
+</html>
